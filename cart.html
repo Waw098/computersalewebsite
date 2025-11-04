@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - For Your Computer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user.css"> <!-- Added user.css -->
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ai-agent.css">
+</head>
+<body>
+    <header>
+        <div class="user-area">
+            <a href="user.html" class="user-icon"><i class="fas fa-user-circle"></i></a>
+            <div class="account-details-popup">
+                <p>Welcome, Guest!</p>
+                <a href="user.html">Sign In / Register</a>
+            </div>
+        </div>
+
+        <div class="header-container">
+            <div class="website-name">For Your Computer</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon"><a href="cart.html" style="color: #e0e0e0; text-decoration: none;">🛒 (<span id="cart-count">0</span>)</a></div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Your Shopping Cart</h1>
+        <section class="cart-items" id="cart-items">
+            <!-- Cart items will be rendered here by JavaScript -->
+        </section>
+
+        <section class="cart-summary">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn" id="checkout-button">Proceed to Checkout</button>
+        </section>
+
+        <div id="purchase-confirmation" style="display: none; text-align: center; padding: 20px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 5px; margin-top: 20px;">
+            <h2>Purchase Successful!</h2>
+            <p>Thank you for your order. Your items will be shipped soon.</p>
+            <button class="btn" onclick="window.location.href='index.html'">Continue Shopping</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 For Your Computer</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="user-script.js"></script>
+    <div id="chat-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div id="chat-window">
+        <div class="header">
+            <p>AI Assistant</p>
+            <i class="fas fa-times" id="close-chat"></i>
+        </div>
+        <div id="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+    <script src="ai-agent.js"></script>
+</body>
+</html>

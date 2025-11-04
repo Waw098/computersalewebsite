@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - For Your Computer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ai-agent.css">
+</head>
+<body>
+    <header>
+        <div class="user-area">
+            <a href="user.html" class="user-icon"><i class="fas fa-user-circle"></i></a>
+            <div class="account-details-popup">
+                <p>Welcome, Guest!</p>
+                <a href="user.html">Sign In / Register</a>
+            </div>
+        </div>
+
+        <div class="header-container">
+            <div class="website-name">For Your Computer</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon"><a href="cart.html" style="color: #e0e0e0; text-decoration: none;">🛒 (<span id="cart-count">0</span>)</a></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="featured-banner">
+            <img src="images/featured-banner.jpg" alt="Featured Products">
+            <div class="banner-content">
+                <h2>Unleash Your Gaming Potential</h2>
+                <p>Explore our top-tier gaming machines built for ultimate performance.</p>
+                <a href="#product-grid" class="btn">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search products...">
+            <button id="search-button"><i class="fas fa-search"></i> Search</button>
+        </div>
+
+        <aside class="product-filters">
+            <h3>Filter By</h3>
+            <div class="filter-group">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="desktop">Desktops</option>
+                    <option value="laptop">Laptops</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="price-range">Price Range</label>
+                <input type="range" id="price-range" min="0" max="3000" value="3000">
+                <span id="price-value">$3000</span>
+            </div>
+            <div class="filter-group">
+                <label for="brand">Brand</label>
+                <input type="text" id="brand" placeholder="e.g., Alienware">
+            </div>
+            <button class="btn apply-filters">Apply Filters</button>
+        </aside>
+
+        <section class="product-grid" id="product-grid">
+            <!-- Product listings will be rendered here by JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 For Your Computer</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="products-script.js"></script>
+    <script src="user-script.js"></script>
+    <div id="chat-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div id="chat-window">
+        <div class="header">
+            <p>AI Assistant</p>
+            <i class="fas fa-times" id="close-chat"></i>
+        </div>
+        <div id="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+    <script src="ai-agent.js"></script>
+</body>
+</html>

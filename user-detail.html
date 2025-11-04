@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details - For Your Computer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user-auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ai-agent.css">
+</head>
+<body>
+    <header>
+        <div class="user-area">
+            <a href="user-auth.html" class="user-icon" id="user-auth-icon"><i class="fas fa-user-circle"></i></a>
+        </div>
+        <div class="header-container">
+            <div class="website-name">For Your Computer</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon"><a href="cart.html" style="color: #e0e0e0; text-decoration: none;">🛒 (0)</a></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="user-details-section">
+            <h1>Welcome, <span id="display-username"></span>!</h1>
+            <p>Email: <span id="display-email"></span></p>
+            <button id="logout-button" class="auth-btn">Logout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 For Your Computer</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="login_signup.js"></script> <!-- Re-use for logout functionality -->
+    <div id="chat-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div id="chat-window">
+        <div class="header">
+            <p>AI Assistant</p>
+            <i class="fas fa-times" id="close-chat"></i>
+        </div>
+        <div id="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+    <script src="ai-agent.js"></script>
+</body>
+</html>

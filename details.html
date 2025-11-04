@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details - Gaming Computer Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="ai-agent.css">
+</head>
+<body>
+    <header>
+        <div class="user-area">
+            <a href="user.html" class="user-icon"><i class="fas fa-user-circle"></i></a>
+            <div class="account-details-popup">
+                <p>Welcome, Guest!</p>
+                <a href="user.html">Sign In / Register</a>
+            </div>
+        </div>
+        <div class="header-container">
+            <div class="website-name">For Your Computer</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon"><a href="cart.html" style="color: #e0e0e0; text-decoration: none;">🛒 (0)</a></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="user-details-section">
+            <h1>User Details</h1>
+            <p id="welcome-message">Loading user details...</p>
+            <!-- Placeholder for more detailed user information -->
+            <div class="user-info">
+                <p><strong>Username:</strong> <span id="detail-username"></span></p>
+                <p><strong>Email:</strong> <span id="detail-email"></span></p>
+                <!-- Add more user details here as needed -->
+            </div>
+            <button id="logout-button" class="btn">Logout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 For Your Computer</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const userInfoString = localStorage.getItem('userInfo');
+          if (userInfoString) {
+              const userInfo = JSON.parse(userInfoString);
+              document.getElementById('welcome-message').textContent = `Welcome, ${userInfo.username}!`;
+              document.getElementById('detail-username').textContent = userInfo.username;
+              document.getElementById('detail-email').textContent = userInfo.email;
+          } else {
+              window.location.href = 'user.html'; // Redirect if not logged in
+          }
+
+          document.getElementById('logout-button').addEventListener('click', () => {
+              localStorage.removeItem('userInfo');
+              window.location.href = 'index.html';
+          });
+      });
+    </script>
+    <div id="chat-icon">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div id="chat-window">
+        <div class="header">
+            <p>AI Assistant</p>
+            <i class="fas fa-times" id="close-chat"></i>
+        </div>
+        <div id="chat-messages">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+    <script src="ai-agent.js"></script>
+</body>
+</html>

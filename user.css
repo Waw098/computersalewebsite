@@ -1,0 +1,211 @@
+.user-area {
+    position: absolute; /* Position relative to the header */
+    top: 1rem; /* Adjust as needed */
+    left: 1rem; /* Place at the left */
+    z-index: 1001; /* Ensure it's above other header elements */
+}
+
+.user-icon i {
+    font-size: 24px;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.account-details-popup {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 30px; /* Adjust based on icon size */
+    left: 0; /* Align with the icon */
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.user-area:hover .account-details-popup {
+    visibility: visible;
+    opacity: 1;
+}
+
+.account-details-popup p {
+    margin: 0 0 5px 0;
+}
+
+.account-details-popup a {
+    color: #00b0ff;
+    text-decoration: none;
+}
+
+.account-details-popup a:hover {
+    text-decoration: underline;
+}
+
+.logout-btn {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto 0 auto;
+    padding: 0.75rem 2rem;
+    background-color: #dc3545; /* Red for logout */
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* User Details Section - inspired by cleaner e-commerce user profiles */
+.user-details-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #0f0f1a; /* Dark background */
+    border: 1px solid #00bcd4; /* Accent border */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+    color: #e0e0e0; /* Light text */
+    text-align: center;
+}
+
+.user-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.profile-icon {
+    font-size: 4rem;
+    color: #00bcd4; /* Accent color */
+    margin-bottom: 1rem;
+}
+
+.profile-username {
+    font-size: 2.5rem;
+    color: #e0e0e0; /* Light text for username */
+    margin: 0;
+}
+
+.user-info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.info-card {
+    background-color: #1a1a2e; /* Slightly lighter dark background for cards */
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #00bcd433; /* Subtle accent border */
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.1);
+}
+
+.info-card h2 {
+    color: #00bcd4;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #00bcd4;
+    padding-bottom: 0.5rem;
+}
+
+.info-card p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.info-card strong {
+    color: #00e5ff;
+}
+
+.user-auth-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #0f0f1a;
+    border: 1px solid #00bcd4;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
+    text-align: center;
+}
+
+.user-auth-section h1 {
+    color: #00bcd4;
+    margin-bottom: 1.5rem;
+}
+
+.auth-forms {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.auth-forms h2 {
+    color: #e0e0e0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #00bcd4;
+    padding-bottom: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #00e5ff;
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+}
+
+.auth-forms .btn {
+    background-color: #00bcd4;
+    color: #1a1a2e;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+
+.auth-forms .btn:hover {
+    background-color: #00e5ff;
+    box-shadow: 0 0 10px #00e5ff;
+}
